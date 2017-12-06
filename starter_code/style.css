@@ -5,11 +5,23 @@
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
 }
 
+
 /* 
 	Use Google Fonts to make all of the text Proza Libre.
 
+
 	Make the Title twice as large as the body text, bold, and give it some nice margin.
 */
+
+body {
+	font-family: 'Proza Libre', sans-serif;
+}
+
+h1 {
+	size: 32px;
+	font-weight: 700;
+	margin: 10px;
+}
 
 /*-------- Main Styles --------*/
 
@@ -21,6 +33,17 @@
 	Every container, form, input, and button should have rounded corners.
 */
 
+#main {
+	width: 100%;
+}
+
+.form { 
+	float: left;
+ }
+
+.results {
+	float: left;
+}
 /*-------- Form Styles --------*/
 
 

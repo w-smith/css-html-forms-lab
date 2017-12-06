@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -111,9 +112,9 @@
 		$("form").on("submit", function(event){
 
 		    // Stop the form from submitting
-
+		    event.preventDefault();
 	    	// Run the 'makeResults' function seen above
-
+	    	makeResults();
 	    	/*
 			
 				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
@@ -129,6 +130,33 @@
 				"In the end, their success can be contributed entirely to their " + ADJECTIVE2[list each one checked, comma-separated] + NOUN2."
 
 	    	*/ 
+
+	    	var name = $('#name').val();
+	    	$('<p>Once upon a time there was a Developer named ' +name+ '.</p>').appendTo('.results');
+
+	    	var verb = $('#verb-1').val();
+	    	$('<p>' +name+ ' came to General Asssembly to ' +verb+ ' the great mountain of programming knowledge.</p>').appendTo('.results');
+
+	    	var mission = $("#mission").val();
+	    	$('<p>' +mission+ ', ' +name+ ' shouted. </p>').appendTo('.results');
+
+	    	var sentiment = $('input[name=sentiment]:checked').val();
+	    	var noun1 = $('#noun-1').val();
+	    	$('<p>Though ' +sentiment+ ', ' +name+ ' was able to overcome all obstacles with the power of their ' +noun1+ ' .</p>').appendTo('.results');
+
+	    	var adjective2 = []; 
+	    	$('input[name="adjective-2"]:checked').each(function() {
+	    		adjective2.push(" " + this.value); });
+
+
+
+	    	var noun2 = $('#noun-2').val();
+	    	$('<p>In the end, their success can be contributed entirely to their ' +adjective2+ ' ' +noun2+ ' .</p>').appendTo('.results');
+
+
+
+
+
 		});
 	</script>
 

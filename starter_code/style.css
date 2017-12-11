@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-	size: 32px;
+	size: 2em;
 	font-weight: 700;
 	margin: 10px;
 }
@@ -38,12 +38,24 @@ h1 {
 }
 
 .form { 
-	float: left;
+	background: #e3e6ec; 
+	width: 100%;
+	max-width: 500px;
+	padding: 10px 20px;
  }
 
-.results {
-	float: left;
-}
+
+
+form,
+input,
+button,
+section,
+select,
+textarea,
+div { 
+	border-radius: 5px;
+ }
+
 /*-------- Form Styles --------*/
 
 
@@ -79,8 +91,89 @@ h1 {
 */
 
 
+input[type="submit"] {
+	display: inline-block;
+	float: right;
+	width: initial;
+	margin-top: 20px;
+	padding: 14px 24px;
+    font-weight: bold;
+	background: rgba(39, 208, 127, .5);
+	transition: all 0.5s ease;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	background: rgba(39, 208, 127, 1);
+}
+
+section.container {
+	float: left;
+	margin: 14px;
+}
+
+.row {
+	margin: 10px 0;
+}
+
+.formGroup {
+	width: 100%;
+	display: inline-block;
+}
+
+.formGroup label {
+	width: 100%;
+	display: block;
+	padding: 8px 0;
+}
+
+.formGroup .radioButtons .radio,
+.formGroup .checkboxes .check {
+	clear: both;
+	margin-left: 14px;
+}
+
+.formGroup .radio label,
+.formGroup .check label {
+	width: inherit;
+	float: left;
+	margin: 0 20px 0 4px;
+	line-height: 38px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+	width: 100%;
+	padding: 14px;
+	border: 1px solid #CCC;
+	box-shadow: none;
+	font-size: 1em;
+	height: 48px;
+}
+
+.formGroup textarea {
+	min-height: 100px;
+}
+
+.formGroup input[type="radio"],
+.formGroup input[type="checkbox"] {
+	width: inherit;
+	display: inline-block;
+	float: left;
+ 
+}
+
+
+
+
 /*-------- Results Styles --------*/
 
+.results {
+	max-width: 500px;
+	background: #c8dbb3;
+	padding: 10px;
+}
 
 /* 
 
